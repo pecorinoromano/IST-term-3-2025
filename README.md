@@ -13,5 +13,7 @@ ideas:
   # non funtional requirements
   - different colours for folders
   - the reminders pop up whenever
+  - simple, easy to look at
+  - shared? you can maybe share one reminder with another person perhaps
 
   
