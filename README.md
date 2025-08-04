@@ -16,4 +16,10 @@ ideas:
   - simple, easy to look at
   - shared? you can maybe share one reminder with another person perhaps
 
-  
+  | Functional Requirements | Non-Functional Requirements |
+|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------| 
+| be able to input what you want to be reminded about | different colours for folders | 
+| to be able to set a reminder timer to a certain time and date | the reminders connect to your computer and pop up whenever |
+| Users are able to change the background/theme | visuals should be high-quality | 
+| Users can set custom timer durations (eg. 25/5/15 mins) | App should work smoothly with no noticeable bugs or crashes |
+|create folders to more clearly seperate things | you could share notifications and reminders with someone else |
