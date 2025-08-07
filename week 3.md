@@ -9,3 +9,4 @@
 
 # Things to improve:
 - pre-made icon for simplicity and ease
+- find a better background (rather than solid, hard colour)
