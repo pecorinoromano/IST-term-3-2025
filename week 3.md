@@ -7,3 +7,5 @@
 | Typography | I still used the Biski font as my main font - I'm still not sure whether I'm going to keep it yet, but it seems pretty good for now. | <img width="760" height="821" alt="image" src="https://github.com/user-attachments/assets/21d3516a-72cd-441b-8e7c-445da6dcc659" /> |
 | Details | I changed the placement of certain buttons, such as the side bar and such, and I also changed the button arrangements. | This picture can be seen in to first row, in the wireframe). |
 
+# Things to improve:
+- pre-made icon for simplicity and ease
