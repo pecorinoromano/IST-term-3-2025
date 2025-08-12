@@ -15,6 +15,6 @@
 | **Test case ID** | #001 |
 | **Test case name** | Setting Reminder |
 | **Preconditions**  | User has to have a title, time and date. |
-| **Test Steps** | Add a Task title, Add a time and date, add details (but no more than 300), and images (but no more than 5), and save details |
+| **Test Steps** | 1.Add a Task title <br> 2. Add a time and date <br> 3. add details (but no more than 300) <br> 4. Add images (but no more than 5) <br> 5. save details |
 | **Expected Results** | A task/reminder is set for your chosen time and date. |
 | **Priority** | High priority - it is the main function of the website/app after all. |
