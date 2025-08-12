@@ -18,3 +18,13 @@
 | **Test Steps** | 1.Add a Task title <br> 2. Add a time and date <br> 3. add details (but no more than 300) <br> 4. Add images (but no more than 5) <br> 5. save details |
 | **Expected Results** | A task/reminder is set for your chosen time and date. |
 | **Priority** | High priority - it is the main function of the website/app after all. |
+
+## Test case 2
+| **Functionality** | **Testing** |
+|------------------------------|------------------------|
+| **Test case ID** | #002 |
+| **Test case name** | Adding Further Details |
+| **Preconditions**  | User has to have a title, time and date. |
+| **Test Steps** | 1.Add a Task title <br> 2. Add a time and date <br> 3. add details (but no more than 300) < <br> 5. save details |
+| **Expected Results** | PASS: Details have been set for your reminder <br> FAIL: You have to remove words until under the word limit |
+| **Priority** | High priority - It contributes to the main function of the website|
