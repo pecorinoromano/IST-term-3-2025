@@ -28,3 +28,6 @@
 | **Test Steps** | 1.Add a Task title <br> 2. Add a time and date <br> 3. add details (but no more than 300) < <br> 5. save details |
 | **Expected Results** | PASS: Details have been set for your reminder <br> FAIL: You have to remove words until under the word limit |
 | **Priority** | High priority - It contributes to the main function of the website|
+
+Things:
+- parts of flowchart dont make sense (connect details to pictures)<br> - outputs (squares to parallelograms) <br> - risks: figure out how to add images
