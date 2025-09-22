@@ -11,4 +11,4 @@ All the login data is connected - the username, email and password. The reminder
 The data types that need to be used for my database are images, text, dates.
 
 #### 5. what queries might you need to write (between and across tables) allowing for good information storage and retrieval
-a
+Some queries that I would need to write are queries about the users (and their details, such as userID, password and email), as well as the reminders and the details that need to go into the reminders.
