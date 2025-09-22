@@ -12,3 +12,6 @@ The data types that need to be used for my database are images, text, dates.
 
 #### 5. what queries might you need to write (between and across tables) allowing for good information storage and retrieval
 Some queries that I would need to write are queries about the users (and their details, such as userID, password and email), as well as the reminders and the details that need to go into the reminders.
+
+## Database Structure
+For the reminders database: In the first column I have the ID number (where you can pull the ID from different reminders), then I have the title [of the reminder], the description, and the due date. All the data is written data, and numerical data for dates. <br> <img width="979" height="469" alt="image" src="https://github.com/user-attachments/assets/1011da43-067c-4b2b-bf71-919eda96454b" />
