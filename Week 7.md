@@ -11,4 +11,4 @@
 <img width="1905" height="899" alt="image" src="https://github.com/user-attachments/assets/978de78e-f23a-4f64-be06-9b187e6d4fce" /> <br>
 
 ## notes
-- today, i worked on making up the base website, and linking the database to the front end.
+- today, i worked on making up the base website, and linking the database to the front end. I then worked on the css and design of the page, working out the themes of the website and then incorporating it into my actual website. I then figured out how to add the logo and the image and stylized that as well.
