@@ -10,6 +10,5 @@
 #### lists
 <img width="1905" height="899" alt="image" src="https://github.com/user-attachments/assets/978de78e-f23a-4f64-be06-9b187e6d4fce" /> <br>
 
-#### 
-
-
+## notes
+- today, i worked on making up the base website, and linking the database to the front end.
