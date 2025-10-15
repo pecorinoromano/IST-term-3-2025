@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="lists-page">
+  <header class="page-header">
+    <h2>My Lists</h2>
+    <form action="/lists" method="POST" class="add-list-form">
+      <input type="text" name="list_name" placeholder="New list name..." required />
+      <button type="submit">+</button>
+    </form>
+  </header>
+
+  <div class="lists-container">
+    {% if lists %}
+      {% for lst in lists %}
+      <div class="list-card" id="list-{{ lst[0] }}">
+        <h3>{{ lst[1] }}</h3>
+        <p>{{ lst[2] if lst[2] else "No description" }}</p>
+        <!-- Delete button -->
+        <button class="delete-list-btn" data-id="{{ lst[0] }}" title="Delete list">🗑️</button>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p class="empty-message">You don’t have any lists yet. Create one above!</p>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+.lists-page {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.add-list-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-list-form input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.add-list-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.lists-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.list-card {
+  position: relative; /* allows delete button positioning */
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.delete-list-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.delete-list-btn:hover {
+  color: red;
+}
+
+.empty-message {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+}
+</style>
+{% endblock %}

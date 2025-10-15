@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="myday-container">
+  <h2>My Day</h2>
+  <div class="task-list">
+    {% for row in reminders %}
+    <div class="task-card">
+      <input type="checkbox" class="task-check" />
+      <div class="task-info">
+        <h3>{{ row[1] }}</h3>
+        <p>{{ row[2] }}</p>
+        <span class="due-date">Due: {{ row[3] }}</span>
+      </div>
+    </div>
+    {% else %}
+    <p class="empty">No reminders yet. Add one on the <a href="/tasks.html">Tasks</a> page.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

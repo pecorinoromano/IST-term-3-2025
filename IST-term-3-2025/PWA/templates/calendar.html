@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block content %}
+<h2>Calendar</h2>
+<div id="calendar"></div>
+
+<!-- FullCalendar CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css"
+  rel="stylesheet"
+/>
+
+<style>
+  #calendar {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 600px;
+  }
+</style>
+
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ DOM loaded, trying to render calendar...");
+    var calendarEl = document.getElementById("calendar");
+
+    if (!calendarEl) {
+      console.error("❌ Calendar div not found!");
+      return;
+    }
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: "dayGridMonth",
+    });
+
+    calendar.render();
+    console.log("✅ Calendar rendered");
+  });
+</script>
+{% endblock %}

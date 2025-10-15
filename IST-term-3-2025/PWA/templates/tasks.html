@@ -1,0 +1,178 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="app-layout">
+  <!-- Top Navigation -->
+  <ul class="topnav">
+    <li><a href="/tasks" class="active">Tasks</a></li>
+    <li><a href="/lists">Lists</a></li>
+    <li><a href="/calendar">Calendar</a></li>
+  </ul>
+
+  <!-- Main Task Section -->
+  <section class="main-content">
+    <h2>Today’s Tasks</h2>
+
+    <!-- Add New Task Form -->
+    <form method="POST" class="add-task-form">
+      <input type="text" name="title" placeholder="Task title" required />
+      <input type="text" name="description" placeholder="Description" />
+      <input type="date" name="due_date" />
+      <button type="submit" class="btn">+ Add Task</button>
+    </form>
+
+    <!-- Task List -->
+    <ul class="task-list">
+      {% for reminder in reminders %}
+      <li class="task-item" id="task-{{ reminder[0] }}" data-id="{{ reminder[0] }}">
+        <input
+          type="checkbox"
+          class="complete-checkbox"
+          {% if reminder[4] %}checked{% endif %}
+        />
+        <div class="task-text">
+          <span class="{% if reminder[4] %}completed{% endif %}">
+            {{ reminder[1] }}
+          </span>
+          <small>{{ reminder[2] }}</small>
+        </div>
+        <button
+          class="delete-btn"
+          title="Delete task"
+        >
+          🗑️
+        </button>
+      </li>
+      {% else %}
+      <li>No tasks yet. Add one above!</li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // --- DELETE TASK ---
+    document.querySelectorAll(".delete-btn").forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const li = e.target.closest("li");
+        const id = li.dataset.id;
+
+        fetch(`/delete/${id}`, { method: "POST" })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success) {
+              li.style.transition = "opacity 0.4s ease";
+              li.style.opacity = "0";
+              setTimeout(() => li.remove(), 400);
+            }
+          })
+          .catch((err) => console.error("Error deleting task:", err));
+      });
+    });
+
+    // --- COMPLETE TASK (optional toggle) ---
+    document.querySelectorAll(".complete-checkbox").forEach((checkbox) => {
+      checkbox.addEventListener("change", (e) => {
+        const li = e.target.closest("li");
+        const id = li.dataset.id;
+        const span = li.querySelector("span");
+
+        fetch(`/complete/${id}`, { method: "POST" })
+          .then(() => {
+            span.classList.toggle("completed");
+          })
+          .catch((err) => console.error("Error completing task:", err));
+      });
+    });
+  });
+</script>
+
+<style>
+  .app-layout {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .add-task-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .add-task-form input,
+  .add-task-form button {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .add-task-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add-task-form button:hover {
+    background: #0056b3;
+  }
+
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .task-item {
+    background: #fff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .task-item .task-text {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  .task-item .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+
+  .delete-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  .delete-btn:hover {
+    color: red;
+  }
+
+  .topnav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .topnav li {
+    list-style: none;
+  }
+
+  .topnav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .topnav a.active {
+    border-bottom: 2px solid #007bff;
+  }
+</style>
+{% endblock %}

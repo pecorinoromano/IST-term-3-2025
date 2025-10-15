@@ -1,0 +1,27 @@
+<nav>
+  <img src="static\images\logo.png" alt="Reminderful Logo" />
+  <h1>Reminderful</h1>
+  <ul class="topnav">
+    <li>
+      <a
+        href="{{ url_for('index') }}"
+        class="{% if request.endpoint == 'home' %}active{% endif %}"
+        >My Day</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{ url_for('tasks') }}"
+        class="{% if request.endpoint == 'tasks' %}active{% endif %}"
+        >Tasks</a
+      >
+    </li>
+    <li>
+      <a
+        href="{{ url_for('lists') }}"
+        class="{% if request.endpoint == 'lists' %}active{% endif %}"
+        >Lists</a
+      >
+    </li> 
+  </ul>
+</nav>
