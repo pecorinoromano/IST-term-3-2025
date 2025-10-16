@@ -1,6 +1,7 @@
 # IST-term-3-2025
 ist assessment task term 3
 
+# Week 1: 
 ideas:
 **- study reminder app**
 - tracking/fitness app
