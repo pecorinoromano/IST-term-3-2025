@@ -38,3 +38,4 @@ Instructions
 - Jing and Emily (For helping me figure stuff out - like lighthouse and how to push vsc into github - and working alongside me on our respective projects)
 - Canva (for making the logo)
 - Coolors.co (for choosing the colour scheme)
+- Friends (who tested my website)
