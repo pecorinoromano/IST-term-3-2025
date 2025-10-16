@@ -1,1 +1,4 @@
+# Term 4 Week 1
+This week was mostly used for finalising the final looks, testing and running the website. This is the final "my day" (homepage) look: <img width="1919" height="877" alt="image" src="https://github.com/user-attachments/assets/4ebbbb69-91fa-47bf-a8d1-c2159c4dac8d" /> <br> this is when i neatened things up and changed my reminders to something more suiting and normal. <p> The final "tasks" section, I changed the colours and asethetics a bit because I liked this better than the other one, but other then that, I didn't change much. <img width="1919" height="872" alt="image" src="https://github.com/user-attachments/assets/a0782602-db37-4d3e-8e87-b39cd72b322d" /> <p> The tasks bar stayed the same, as I liked the look and feel of it. <p> I also finished up my markdowns and added additional images and pictures. Then, I ran lighthouse to test the performance of my website. These pictures are attatched in the markdown file labeled "lighthouse."
+
 
