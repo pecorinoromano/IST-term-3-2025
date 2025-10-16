@@ -27,6 +27,13 @@ Instructions
 
 ## Instruction Manual
 1. Download "IST-term-3-2023" file and extract it, and then load it into vscode
-2. Run flask in the terminal, and install all the necessities from requirements.txt
+2. Run flask in the terminal, and run python.main
 3. Click the web link that the terminal gives you, and run the website
 4. TIP: the website opens up on the "my day" page, which is the home page. After that, you can explore.
+
+#### Acknowledgements
+- Chatgpt (helping me with some of the errors that I couldn't figure out how to change)
+- Any.do (I based my website design and idea sort of on this)
+- Jing and Emily (For helping me figure stuff out - like lighthouse and how to push vsc into github - and working alongside me on our respective projects)
+- Canva (for making the logo)
+- Coolors.co (for choosing the colour scheme)
