@@ -11,7 +11,7 @@ ideas:
 - to be able to set a reminder timer to a certain time and date
 - and if there is time, make folders to seperate it into different categories to make it neater
 
-  # non funtional requirements
+  # non functional requirements
   - different colours for folders
   - the reminders pop up whenever
   - simple, easy to look at
